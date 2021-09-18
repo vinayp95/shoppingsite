@@ -1,0 +1,30 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"
+    style="display: flex; justify-content: center; padding: 2%">
+    <li class="nav-item" role="presentation" *ngFor="let category of categories; first as first">
+        <button class="nav-link" id="{{category}}" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+            role="tab" aria-controls="pills-home" aria-selected="first ? true : false"
+            (click)=setCurrentCat(category)>{{category}}</button>
+    </li>
+
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <span *ngFor="let category of categories">
+        <div class="tab-pane fade" *ngIf="category === current_category" [class.active]="category === current_category"
+            [class.show]="category === current_category" id="{{category}}" role="tabpanel"
+            aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" *ngFor="let product of products">
+                    <div class="card" style="margin: 10px;" 
+                        (click)="gotoProdDetails(product)">
+                        <img class="card-img-top" src="{{product.image}}" alt="Card image cap"
+                            style="height: 20em; width: auto;">
+                        <div class="card-body">
+                            <h3 class="card-title">{{product.title}}</h3>
+                            <p>Price : {{product.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>

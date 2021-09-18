@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="card" style="margin: 10px;">
+    <div class="row" style="padding: 2rem;">
+        <div class="col-lg-4" style="text-align: center;">
+            <img class="card-img-top" src="{{product?.image}}" alt="Card image cap" style="height: 20em; width: auto;">
+        </div>
+        <div class="col-lg-8">
+            <div class="card-body">
+                <h3 class="card-title">{{product?.title}}</h3>
+                <p>Price : {{product?.price}}</p>
+                <p>{{product?.description}}</p>
+                <button type="button" class="btn btn-secondary" (click)="addToCart()">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>

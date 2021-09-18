@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+  <h2 style="padding: 5px;"><a class="navbar-brand" href="/">ZeroZilla</a></h2>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  </form>
+  <div style="margin:10px">
+    <button type="button" class="btn btn-primary" style="margin:0 10px;">
+      Cart <span class="badge badge-light">{{itemsCount}}</span>
+    </button>
+    <button type="button" class="btn btn-primary" (click)="emptyCart()" style="margin:0 10px;">
+      Empty Cart
+    </button>
+    <a href="/profile">
+      <img class="card-img-top"
+        src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWJzdHJhY3QlMjBwcm9maWxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+        alt="Card image cap" style="height: 35px; width: 35px; border-radius: 25px;"></a>
+  </div>
+</nav>

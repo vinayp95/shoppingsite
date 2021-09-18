@@ -1,0 +1,8 @@
+.nav-link{
+    color: #fff;
+}
+.nav-item{
+    background-color: #333;
+    margin: 10px;
+    border-radius:5px;
+}
